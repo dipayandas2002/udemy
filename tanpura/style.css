@@ -1,0 +1,48 @@
+.container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+    height: 97vh;
+    background-image: url(img/pngwing.com.png) ;
+    background-repeat: no-repeat;
+    background-size: 100% 130%;
+    background-position-y: -110px;
+    background-blend-mode: color-dodge;
+   
+}
+.btn{
+   
+    display: block;
+    margin: 10px;
+    border-radius: 6px;
+    border: 1px solid black;
+    box-shadow: 2px 2px gray;
+    cursor: pointer;
+
+}
+.control{
+    display: flex;
+    border: 1px solid black;
+    position: relative;
+    top:120px;
+    left: 10px;
+}
+
+.img{
+    display: block;
+    height: 50px;
+    width: 50px;
+}
+.pressed{
+    box-shadow: 5px 5px gray;
+}
+.play{
+    position: relative;
+    top:130px;
+    left: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+}
