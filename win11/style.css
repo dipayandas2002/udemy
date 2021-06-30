@@ -1,0 +1,51 @@
+html{
+    overflow: hidden;
+}
+*{
+    margin-right: 10px;
+}
+
+.video{
+    height: 94vh;
+    width: 99vw;
+    
+    text-align: center;
+   background-color: black;
+
+    z-index: 8;
+    
+}
+
+.icons{
+    
+    position: relative;
+    bottom: 18px;
+   box-sizing: border-box;
+   width: 99vw;
+   background-color:#f3f3f3;
+   padding-top: 4px;
+  
+   overflow: hidden;
+   z-index: 102;
+}
+.task{
+    float: right;
+}
+.icon{
+    position: relative;
+    left: 37%;
+}
+.start img{
+    border-radius: 10px;
+    z-index: 10;
+    position: relative;
+    bottom: -800px;
+    transition: all 0.6s ease-in-out;
+   
+}
+.start{
+    position: absolute;
+    bottom: 60px;
+    left: 29%;
+    overflow: hidden;
+}
