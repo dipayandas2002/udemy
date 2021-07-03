@@ -1,0 +1,43 @@
+.clock{
+    display: flex;
+    justify-content: center;
+    align-content: flex-end;
+    z-index: auto;
+    
+}
+.hour{
+    
+    position: absolute;
+    top: 141px;
+    right: 49.9%;
+    background-color: black;
+    height: 116px;
+    width: 10px;
+    border-radius: 30px;
+    transform-origin: bottom;
+}
+.min{
+    
+    /* display: none; */
+    position: absolute;
+    border-radius: 30px;
+    transform-origin: bottom;
+    top: 100px;
+    right: 50.05%;
+    background-color: black;
+    height: 157px;
+    width: 6px;
+    
+}
+.sec{
+    
+    /* display: none; */
+    transform-origin: bottom;
+    position: absolute;
+    top: 97px;
+    border-radius: 30px;
+    right: 50.14%;
+    background-color: black;
+    height: 158px;
+    width: 3px;
+}
