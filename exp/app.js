@@ -31,7 +31,7 @@ fetch('https://api.covid19india.org/v2/state_district_wise.json')
 
         // console.log(districtData.district);
 
-        fetch('/data.json')
+        fetch('data.json')
           .then((response) => {
             return response.json()
           })
