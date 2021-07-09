@@ -1,25 +1,16 @@
-
-
-
 mapboxgl.accessToken = 'pk.eyJ1IjoiZGlwYXlhbmRhczM2MCIsImEiOiJja3Fybm1xZXUxMWFjMzJuYnlqeDhkYjJtIn0.kqhXRux7wwHsaj9rOL3v_w';
 var map = new mapboxgl.Map({
   container: 'map',
   style: 'mapbox://styles/mapbox/dark-v10',
   zoom: 3.5,
-  center: [80, 22],
+  center: [85, 22],
   minZoom: 4,
-
-
+  
+  
 });
-var geocoder = new MapboxGeocoder({ accessToken: mapboxgl.accessToken });
-map.addControl(geocoder);
-
 
 // var llb = new mapboxgl.LngLatBounds(85, 25);
 // map.dragPan.disable()
-// iconsole.log(map.getZoom())
-
-
 
 
 fetch('https://api.covid19india.org/v2/state_district_wise.json')
@@ -38,7 +29,7 @@ fetch('https://api.covid19india.org/v2/state_district_wise.json')
 
         // console.log(districtData.district);
 
-        fetch('https://raw.githubusercontent.com/dipayandas2002/udemy/main/exp/data.json')
+        fetch('data.json')
           .then((response) => {
             return response.json()
           })
@@ -59,30 +50,21 @@ fetch('https://api.covid19india.org/v2/state_district_wise.json')
                   //   .color("#ebcc34")
                   //   .addTo(map);
 
-
-
                   var r = 255 - districtData.confirmed / 100;
                   var g = 255 - districtData.recovered / 100;
-
-
                   marker = new mapboxgl.Marker({
                     color: `rgb(${r},${g},255)`,
                     draggable: false,
                     scale: 0.6
-
                   }).setLngLat([posElement.Longitude, posElement.Latitude])
 
                     .setPopup(new mapboxgl.Popup().setHTML(`<div>INFO</div><div><strong>State</strong>  :  ${element.state}</div>
                     <div><strong>District</strong>  :  ${districtData.district}</div>
                     <div><strong>Confirmed</strong>  :  ${districtData.confirmed}</div>
-                    <div><strong>Recovered</strong>  :  ${districtData.recovered}</div>
-                    <a href="http://www.google.com">google</a>`))
+                    <div><strong>Recovered</strong>  :  ${districtData.recovered}</div>`))
                     .addTo(map);
-
                 })
-
               }
-
 
             }
 
@@ -117,5 +99,5 @@ fetch('https://api.covid19india.org/v2/state_district_wise.json')
 
   })
   .catch((err) => {
-    // Do something for an error here
+    console.log(err);
   })
