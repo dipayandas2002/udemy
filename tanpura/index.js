@@ -1,4 +1,4 @@
-var ar = ["a", "b", "c", "d", "e", "f", "g"];
+var ar = ["A","A#", "B" ,"B#", "C","C#", "D","D#", "E","E#", "F","F#", "G","G#"];
 var index = 0;
 var playvalue = 0;
 
@@ -24,7 +24,7 @@ $('#down').on('click', function (e) {
     
 });
 $('#up').on('click', function (e) {
-    if (index != 6) {
+    if (index != 13) {
         index++;
     }
     addclass("up");
@@ -44,7 +44,15 @@ var e = new Audio("sounds/e.mp3");
 var f = new Audio("sounds/f.mp3");
 var g = new Audio("sounds/g.mp3");
 
-var audio = [a,b,c,d,e,f,g]
+var as = new Audio("sounds/as.mp3");
+var bf = new Audio("sounds/bf.mp3");
+var cs = new Audio("sounds/cs.mp3");
+var ds = new Audio("sounds/ds.mp3");
+var es = new Audio("sounds/es.mp3");
+var fs = new Audio("sounds/fs.mp3");
+var gs = new Audio("sounds/gs.mp3");
+
+var audio = [a,as,b,bf,c,cs,d,ds,e,es,f,fs,g,gs]
 
 
 $(".play").on("click", function (e) {
@@ -72,7 +80,7 @@ $(".play").on("click", function (e) {
 
 function scalechange(){
     setInterval(() => {
-        $("#scale").html(`<img class="img" src="img/scales/${ar[index]}.png" >`)
+        $("#scale").html(`<div class="img"> ${ar[index]} </div>`)
     }, 100);
     playvalue = 0;
     // audio[oldindex].pause();

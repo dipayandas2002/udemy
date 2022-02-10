@@ -24,7 +24,7 @@
 }
 .control{
     display: flex;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     position: relative;
     top:120px;
     left: 10px;
@@ -34,6 +34,9 @@
     display: block;
     height: 50px;
     width: 50px;
+    font-weight: 1000;
+    font-size: 2.2pc;
+    text-align: center;
 }
 .pressed{
     box-shadow: 5px 5px gray;
